@@ -18,3 +18,20 @@ code.py
       that cluster, 
       and the height of that bar is proportional to the number of points in that cluster.
     + Show a scatter plot (graph) of ONLY the centroid points, identifying cluster-centroids by color.
+
+
+mapper1.py      reducer1.py
+ On AWS please take the CSV file and place it on AWS, either in EC2 or S3 (or similar).
+    + Using Hadoop, with 4 mappers and one reducer, on one (or more, if you wish) instances, 
+      find the number of people (count) who live in the state "TX".  
+    + Show time to run and results (preferably on an AWS web page). 
+    + Create a web page on AWS that shows in your browser: (in large letters) Your Last Name 
+      (as it appears on your ID card), your last 4 digits of your ID and the class section (time) 
+      that you are taking the class, 
+    + and then show your results or on an AWS interface screen. 
+    
+mapper2.py      reducer2.py
+    + Create a web form (on AWS) (or other forms of input) that allows a user to input an 
+      range of ages (from:... to:...), and using Hadoop with
+      5 mappers and 2 reducers, similar to part 6, show: your results. 
+    + On a web page, results and time taken. 
