@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+    <title>list of clusters</title>
+    <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<h2>clustering</h2>
+
+<img src=" {{ url_for('static',filename = img) }}" height="500" width="500">
+<a>the time taken is:{{time}}</a><br/>
+<a>the centroids are:</a><br/>
+<table>
+<tr>
+  <tr>
+    <th>clusters</th>
+    <th>X</th>
+    <th>Y</th>
+  </tr>
+<tr>
+{% for i in cent %}
+
+<td>cluster</td>
+            <td> {{ i[0] }}</td>
+            <td> {{ i[1] }}</td>
+    </tr>
+{% endfor %}
+</table>
+<a>the centroids point counts are:</a><br/>
+{{ count }}
+<img src=" {{ url_for('static',filename = img1) }}" height="500" width="500">
+</body>
+</html>
